@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Poolsteuerung.models;
+
 //using System.Device.Gpio;
 
 
@@ -23,12 +25,12 @@ namespace Poolsteuerung
         {
             public static int Sektick = 10;
             public static int Mintick = 1;
-            public static float labdec1 = 0;
-            public static float labdec2 = 0;
-            public static float labdec3 = 0;
-            public static float labdec4 = 0;
-            public static float labdec5 = 0;
-            public static float labdec6 = 0;
+            public static double labdec1 = 0;
+            public static double labdec2 = 0;
+            public static double labdec3 = 0;
+            public static double labdec4 = 0;
+            public static double labdec5 = 0;
+            public static double labdec6 = 0;
         }
 
         private void btn_off_Click(object sender, EventArgs e)
@@ -66,14 +68,14 @@ namespace Poolsteuerung
            
         }
 
-        private void timer_abfrage_Tick(object sender, EventArgs e)
+        private async void timer_abfrage_Tick(object sender, EventArgs e)
         {
             //GPIO Ausgang vorbereiten
             //int pin = 21;
             //var controller = new GpioController();
             //controller.OpenPin(pin, PinMode.Output);
 
-            float mittelwert;
+            var mittelwert = 0.0;
             //Werte durch die Zwischenspeicher schieben
             Global.labdec5 = Global.labdec4;
             Global.labdec4 = Global.labdec3;
@@ -87,33 +89,19 @@ namespace Poolsteuerung
             mittelwert = mittelwert + Global.labdec1;
             Global.labdec6 = mittelwert / 5;
 
+
             //Wert aus dem Nummernlabel ziehen
-            Global.labdec1 = (float)numer1.Value;
+            //Global.labdec1 = (float)numer1.Value;
+
+            Global.labdec1 = await WebRequest.GetValue();
 
             //Werte aus den Variablen ausgeben
-            int int_zwi = (int)Global.labdec1;
-            string str_zwi = int_zwi.ToString();
-            label1.Text = str_zwi;
-
-            int_zwi = (int)Global.labdec2;
-            str_zwi = int_zwi.ToString();
-            label2.Text = str_zwi;
-
-            int_zwi = (int)Global.labdec3;
-            str_zwi = int_zwi.ToString();
-            label3.Text = str_zwi;
-
-            int_zwi = (int)Global.labdec4;
-            str_zwi = int_zwi.ToString();
-            label4.Text = str_zwi;
-
-            int_zwi = (int)Global.labdec5;
-            str_zwi = int_zwi.ToString();
-            label5.Text = str_zwi;
-
-            int_zwi = (int)Global.labdec6;
-            str_zwi = int_zwi.ToString();
-            label6.Text = str_zwi;
+            label1.Text = String.Format("{0}", Math.Round(Global.labdec1, 2));
+            label2.Text = String.Format("{0}", Math.Round(Global.labdec2, 2));
+            label3.Text = String.Format("{0}", Math.Round(Global.labdec3, 2));
+            label4.Text = String.Format("{0}", Math.Round(Global.labdec4, 2));
+            label5.Text = String.Format("{0}", Math.Round(Global.labdec5, 2));
+            label6.Text = String.Format("{0}", Math.Round(Global.labdec6, 2));
 
             // Ausgang schalten
 
