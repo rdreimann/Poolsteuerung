@@ -1,0 +1,48 @@
+2021-06-25 21:19:56.701 +02:00 [INF] Loaded 2 extensions
+2021-06-25 21:19:56.997 +02:00 [INF] MSBuild registered from C:\Program Files\dotnet\sdk\5.0.204\
+2021-06-25 21:19:58.683 +02:00 [INF] Initializing upgrade step Select an entrypoint
+2021-06-25 21:19:58.689 +02:00 [INF] Setting entrypoint to only project in solution: C:\Users\rouven.dreimann\source\repos\Poolsteuerung\Poolsteuerung.csproj
+2021-06-25 21:19:58.702 +02:00 [INF] Initializing upgrade step Select project to upgrade
+2021-06-25 21:19:58.781 +02:00 [INF] Initializing upgrade step Back up project
+2021-06-25 21:20:32.779 +02:00 [INF] Skipping upgrade step Back up project
+2021-06-25 21:20:32.783 +02:00 [INF] Upgrade step Back up project skipped
+2021-06-25 21:20:44.110 +02:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-06-25 21:20:50.478 +02:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-06-25 21:20:50.483 +02:00 [INF] Converting project file format with try-convert, version 0.7.226301
+2021-06-25 21:20:50.860 +02:00 [INF] [dotnet] C:\Users\rouven.dreimann\source\repos\Poolsteuerung\Poolsteuerung.csproj contains an App.config file. App.config is replaced by appsettings.json in .NET Core. You will need to delete App.config and migrate to appsettings.json if it's applicable to your project.
+2021-06-25 21:20:52.865 +02:00 [INF] [dotnet] Conversion complete!
+2021-06-25 21:20:53.224 +02:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-06-25 21:20:56.348 +02:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-06-25 21:21:00.221 +02:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-06-25 21:21:03.103 +02:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-06-25 21:21:03.110 +02:00 [INF] No package updates needed
+2021-06-25 21:21:03.111 +02:00 [INF] Initializing upgrade step Update TFM
+2021-06-25 21:21:03.124 +02:00 [INF] TFM needs updated to net5.0-windows
+2021-06-25 21:21:12.228 +02:00 [INF] Applying upgrade step Update TFM
+2021-06-25 21:21:14.603 +02:00 [INF] Updated TFM to net5.0-windows
+2021-06-25 21:21:14.606 +02:00 [INF] Upgrade step Update TFM applied successfully
+2021-06-25 21:21:17.262 +02:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-06-25 21:21:19.058 +02:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-06-25 21:21:20.413 +02:00 [INF] Adding Microsoft.Windows.Compatibility 5.0.2
+2021-06-25 21:21:20.417 +02:00 [INF] Packages to be added: Microsoft.Windows.Compatibility, Version=5.0.2
+2021-06-25 21:21:23.956 +02:00 [INF] Applying upgrade step Update NuGet Packages
+2021-06-25 21:21:23.960 +02:00 [INF] Adding package reference: Microsoft.Windows.Compatibility, Version=5.0.2
+2021-06-25 21:21:37.798 +02:00 [INF] Marking package System.Data.DataSetExtensions for removal because it appears to be a transitive dependency
+2021-06-25 21:21:37.840 +02:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-06-25 21:21:37.924 +02:00 [INF] Removing outdated package reference: System.Data.DataSetExtensions, Version=4.5.0
+2021-06-25 21:21:40.446 +02:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-06-25 21:21:40.513 +02:00 [INF] Upgrade step Update NuGet Packages applied successfully
+2021-06-25 21:21:47.482 +02:00 [INF] Initializing upgrade step Add template files
+2021-06-25 21:21:47.492 +02:00 [INF] 0 expected template items needed
+2021-06-25 21:21:47.495 +02:00 [INF] Initializing upgrade step Upgrade app config files
+2021-06-25 21:21:47.513 +02:00 [INF] Found 0 app settings for upgrade: 
+2021-06-25 21:21:47.517 +02:00 [INF] Found 0 connection strings for upgrade: 
+2021-06-25 21:21:47.531 +02:00 [INF] Initializing upgrade step Update source code
+2021-06-25 21:21:49.356 +02:00 [INF] Initializing upgrade step Move to next project
+2021-06-25 21:22:00.322 +02:00 [INF] Applying upgrade step Move to next project
+2021-06-25 21:22:00.325 +02:00 [INF] Upgrade step Move to next project applied successfully
+2021-06-25 21:22:01.848 +02:00 [INF] Initializing upgrade step Finalize upgrade
+2021-06-25 21:22:04.974 +02:00 [INF] Applying upgrade step Finalize upgrade
+2021-06-25 21:22:04.977 +02:00 [INF] Upgrade step Finalize upgrade applied successfully
+2021-06-25 21:22:06.629 +02:00 [INF] Upgrade has completed. Please review any changes.
+2021-06-25 21:22:06.638 +02:00 [INF] No state to save
