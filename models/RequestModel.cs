@@ -103,7 +103,7 @@ namespace Poolsteuerung.models
             var floatVals = BitConverter.GetBytes(num);
             var f = BitConverter.ToSingle(floatVals, 0);
 
-            var erg = Math.Round(f * 100) / 100000;
+            var erg = Math.Round(f * 100) / 100_000;
             return erg;
         }
 
