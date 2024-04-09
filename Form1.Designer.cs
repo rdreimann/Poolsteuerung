@@ -41,9 +41,7 @@ namespace Poolsteuerung
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numer1 = new System.Windows.Forms.NumericUpDown();
             this.Ausgang = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numer1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_off
@@ -82,7 +80,7 @@ namespace Poolsteuerung
             // timer_abfrage
             // 
             this.timer_abfrage.Enabled = true;
-            this.timer_abfrage.Interval = 5000;
+            this.timer_abfrage.Interval = 30000;
             this.timer_abfrage.Tick += new System.EventHandler(this.timer_abfrage_Tick);
             // 
             // timer_1h
@@ -144,22 +142,14 @@ namespace Poolsteuerung
             this.label6.TabIndex = 9;
             this.label6.Text = "label6";
             // 
-            // numer1
-            // 
-            this.numer1.Location = new System.Drawing.Point(50, 275);
-            this.numer1.Name = "numer1";
-            this.numer1.Size = new System.Drawing.Size(120, 20);
-            this.numer1.TabIndex = 10;
-            this.numer1.ValueChanged += new System.EventHandler(this.numer1_ValueChanged);
-            // 
             // Ausgang
             // 
             this.Ausgang.AutoSize = true;
-            this.Ausgang.Location = new System.Drawing.Point(350, 275);
+            this.Ausgang.Location = new System.Drawing.Point(319, 270);
             this.Ausgang.Name = "Ausgang";
-            this.Ausgang.Size = new System.Drawing.Size(80, 17);
+            this.Ausgang.Size = new System.Drawing.Size(68, 17);
             this.Ausgang.TabIndex = 11;
-            this.Ausgang.Text = "checkBox1";
+            this.Ausgang.Text = "Ausgang";
             this.Ausgang.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -168,7 +158,6 @@ namespace Poolsteuerung
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 362);
             this.Controls.Add(this.Ausgang);
-            this.Controls.Add(this.numer1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -180,7 +169,7 @@ namespace Poolsteuerung
             this.Controls.Add(this.btn_off);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numer1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +188,6 @@ namespace Poolsteuerung
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numer1;
         private System.Windows.Forms.CheckBox Ausgang;
     }
 }

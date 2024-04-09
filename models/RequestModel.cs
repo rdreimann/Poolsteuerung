@@ -43,7 +43,10 @@ namespace Poolsteuerung.models
 
     public class WebRequest
     {
-        private static readonly HttpClient MyClient = new HttpClient();
+        private static readonly HttpClient MyClient = new HttpClient(new HttpClientHandler
+        {
+            ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+        });
 
         /// <summary>
         /// Gets the GUI_GRID_POW as double
@@ -85,7 +88,7 @@ namespace Poolsteuerung.models
 
             var jsonString = JsonConvert.SerializeObject(requestPoco);
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-            var response = await MyClient.PostAsync("http://192.168.2.82/lala.cgi", content);
+            var response = await MyClient.PostAsync("https://192.168.2.82/lala.cgi", content);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 var responseString = await response.Content.ReadAsStringAsync();
